@@ -1,0 +1,12 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"color_scheme": "Packages/material-theme/schemes/Material-Theme.tmTheme",
+	"debug": true,
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"translate_tabs_to_spaces": true
+}

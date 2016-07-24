@@ -1,0 +1,11 @@
+[
+	{ "keys": ["ctrl+e"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["ctrl+click"], "command": "anaconda_goto"},
+    { "keys": ["ctrl+d"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["ctrl+shift+h"], "command": "html_beautify",
+      "context": [{
+        "key": "selector",
+        "operator": "equal",
+        "operand": "text.html,text.html.twig,text.twig,source.html,source.html.twig,source.twig"}]
+    },
+]

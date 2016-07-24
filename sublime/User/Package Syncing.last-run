@@ -1,0 +1,107 @@
+{
+    "last_local_data": {
+        "Anaconda.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Anaconda.sublime-settings", 
+            "version": 1434015840.1483276
+        }, 
+        "Default (Windows).sublime-keymap": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Default (Windows).sublime-keymap", 
+            "version": 1434071269.2618577
+        }, 
+        "Distraction Free.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Distraction Free.sublime-settings", 
+            "version": 1433606964.0
+        }, 
+        "JSON.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\JSON.sublime-settings", 
+            "version": 1434070380.4176445
+        }, 
+        "Javatar.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Javatar.sublime-settings", 
+            "version": 1434167627.6743038
+        }, 
+        "Package Control.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Package Control.sublime-settings", 
+            "version": 1434078657.7548137
+        }, 
+        "Preferences.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Preferences.sublime-settings", 
+            "version": 1434078658.7627218
+        }, 
+        "Python Django.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Python Django.sublime-settings", 
+            "version": 1434015523.7970095
+        }, 
+        "Python.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Python.sublime-settings", 
+            "version": 1433501082.1929228
+        }, 
+        "bh_core.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\bh_core.sublime-settings", 
+            "version": 1432785367.670285
+        }
+    }, 
+    "last_remote_data": {
+        "Anaconda.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Anaconda.sublime-settings", 
+            "version": 1434015840.1483276
+        }, 
+        "Default (Windows).sublime-keymap": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Default (Windows).sublime-keymap", 
+            "version": 1434071269.2618577
+        }, 
+        "Distraction Free.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Distraction Free.sublime-settings", 
+            "version": 1433606964.0
+        }, 
+        "JSON.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\JSON.sublime-settings", 
+            "version": 1434070380.4176445
+        }, 
+        "Javatar.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Javatar.sublime-settings", 
+            "version": 1434167627.6743038
+        }, 
+        "Package Control.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Package Control.sublime-settings", 
+            "version": 1434078657.7548137
+        }, 
+        "Preferences.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Preferences.sublime-settings", 
+            "version": 1434078658.7627218
+        }, 
+        "Python Django.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Python Django.sublime-settings", 
+            "version": 1434015523.7970095
+        }, 
+        "Python.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\Python.sublime-settings", 
+            "version": 1433501082.1929228
+        }, 
+        "bh_core.sublime-settings": {
+            "dir": "", 
+            "path": "C:\\Users\\VMT\\Dropbox\\Sublime\\bh_core.sublime-settings", 
+            "version": 1432785367.670285
+        }
+    }, 
+    "remove_packages": []
+}

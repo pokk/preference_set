@@ -1,0 +1,34 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"Anaconda",
+		"BracketHighlighter",
+		"C Improved",
+		"Codecs33",
+		"ConvertToUTF8",
+		"CTags",
+		"Djaneiro",
+		"DocBlockr",
+		"Highlighter",
+		"HTMLBeautify",
+		"JavaImports",
+		"Javatar",
+		"Kotlin",
+		"Markmon real-time markdown preview",
+		"Package Control",
+		"Package Syncing",
+		"Pandoc",
+		"Predawn",
+		"Pretty JSON",
+		"Python 3",
+		"Python Completions",
+		"SublimeCodeIntel",
+		"Tag"
+	]
+}
