@@ -1143,6 +1143,10 @@
 				<string>deleteToBeginningOfLine:</string>
 				<string>deleteToEndOfParagraph:</string>
 			</array>
+			<key>^~</key>
+			<string>moveToBeginningOfText:</string>
+			<key>^~</key>
+			<string>moveToEndOfText:</string>
 			<key></key>
 			<string>moveToBeginningOfText:</string>
 			<key></key>
