@@ -12,16 +12,12 @@ class ${NAME} @Inject constructor(): ${Contract_name}Contract.Presenter {
         this.view = view
     }
 
-    override fun init() {
-    }
+    override fun init() { }
 
-    override fun resume() {
-    }
+    override fun resume() { }
 
-    override fun pause() {
-    }
+    override fun pause() { }
 
-    override fun destroy() {
-    }
+    override fun destroy() { }
     //endregion
 }

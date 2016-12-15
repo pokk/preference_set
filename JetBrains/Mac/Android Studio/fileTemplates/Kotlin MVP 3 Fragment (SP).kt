@@ -33,6 +33,7 @@ class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
     //region Fragment lifecycle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Get the arguments from the bundle here.
         if (null != arguments) {
             this.arg1 = arguments.getString(${NAME}.ARG_PARAM_)
         }
@@ -57,10 +58,7 @@ class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
         return rootView
     }
     
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-        override fun onResume() {
+    override fun onResume() {
         super.onResume()
         this.presenter.resume()
     }
@@ -77,19 +75,21 @@ class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
         super.onDestroy()
     }
     //endregion
+    
+    /**
+     * Initialize the fragment of listeners, pictures, ...etc.
+     */
+    override fun init() {
+    }
 
     //region Presenter implements
-    override fun showLoading() {
-    }
+    override fun showLoading() { }
 
-    override fun hideLoading() {
-    }
+    override fun hideLoading() { }
 
-    override fun showRetry() {
-    }
+    override fun showRetry() { }
 
-    override fun hideRetry() {
-    }
+    override fun hideRetry() { }
 
     override fun showError(message: String) {
         Preconditions.checkNotNull(message)
