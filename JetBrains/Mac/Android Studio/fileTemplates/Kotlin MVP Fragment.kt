@@ -30,9 +30,8 @@ class ${NAME}: BaseFragment() {
     //region Fragment lifecycle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (null != arguments) {
-            this.arg1 = arguments.getString(${NAME}.ARG_PARAM_)
-        }
+        // Get the arguments from the bundle here.
+        this.arg1 = arguments?.getString(${NAME}.ARG_PARAM_)
     }
     
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

@@ -4,17 +4,18 @@ import dagger.internal.Preconditions
 import rx.Observable
 #end
 #parse("File Header.java")
+@PerFragment
 class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
     companion object Factory {
         // The key name of the fragment initialization parameters.
-        @JvmStatic private val ARG_PARAM_: String = "param_"
+        private val ARG_PARAM_: String = "param_"
 
         /**
          * Use this factory method to create a new instance of this fragment using the provided parameters.
          *
          * @return A new instance of [fragment] ${NAME}.
          */
-        @JvmStatic fun newInstance(arg1: String): ${NAME} {
+        fun newInstance(arg1: String): ${NAME} {
             val fragment: ${NAME} = ${NAME}()
             val bundle: Bundle = Bundle()
             bundle.putString(ARG_PARAM_, arg1)
@@ -23,41 +24,21 @@ class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
             return fragment
         }
     }
-    
+
     @Inject
     lateinit var presenter: ${Contract_name}Contract.Presenter
-    
+
     // The fragment initialization parameters.
     private var arg1: String? = null
-    
+
     //region Fragment lifecycle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // Get the arguments from the bundle here.
-        if (null != arguments) {
-            this.arg1 = arguments.getString(${NAME}.ARG_PARAM_)
-        }
+        this.arg1 = arguments?.getString(${NAME}.ARG_PARAM_)
     }
-    
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Avoid that an activity is deleted and get null pointer so inject the component here.
-        this.getComponent(UseCaseComponent::class.java, null).inject(${NAME}@ this)
-        // Keep the instance data.
-        this.retainInstance = true
 
-        // FIXED: https://www.zybuluo.com/kimo/note/255244
-        if (null == rootView)
-            rootView = inflater.inflate(R.layout.fragment_about, null)
-        val parent: ViewGroup? = rootView?.parent as ViewGroup?
-        parent?.removeView(rootView)
-
-        this.presenter.setView(${NAME}@ this)
-        this.presenter.init()
-
-        return rootView
-    }
-    
     override fun onResume() {
         super.onResume()
         this.presenter.resume()
@@ -75,28 +56,34 @@ class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
         super.onDestroy()
     }
     //endregion
-    
+
+    //region Initialization's order
     /**
-     * Initialize the fragment of listeners, pictures, ...etc.
+     * Inject this fragment and [FragmentComponent].
+     */
+    override fun inject() {
+        this.getComponent(FragmentComponent::class.java, null).inject(${NAME}@ this)
+    }
+
+    /**
+     * Set this fragment xml layout.
+     *
+     * @return [LayoutRes] xml layout.
+     */
+    @LayoutRes
+    override fun inflateView(): Int = R.layout.fragment
+
+    /**
+     * Set the presenter initialization.
+     */
+    override fun initPresenter() {
+        this.presenter.init(${NAME}@ this)
+    }
+
+    /**
+     * Initialization of this fragment. Set the listeners or view components' attributions.
      */
     override fun init() {
     }
-
-    //region Presenter implements
-    override fun showLoading() { }
-
-    override fun hideLoading() { }
-
-    override fun showRetry() { }
-
-    override fun hideRetry() { }
-
-    override fun showError(message: String) {
-        Preconditions.checkNotNull(message)
-    }
-
-    override fun context(): Context = this.activity.applicationContext
-
-    override fun fragmentLifecycle(): Observable<FragmentEvent> = this.lifecycle()
     //endregion
 }
