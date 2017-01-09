@@ -6,39 +6,31 @@ import rx.Observable
 #parse("File Header.java")
 @PerFragment
 class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
+    //region Static initialization
     companion object Factory {
         // The key name of the fragment initialization parameters.
-        private val ARG_PARAM_: String = "param_"
+        private const val ARG_PARAM_: String = "param_"
 
         /**
          * Use this factory method to create a new instance of this fragment using the provided parameters.
          *
          * @return A new instance of [fragment] ${NAME}.
          */
-        fun newInstance(arg1: String): ${NAME} {
-            val fragment: ${NAME} = ${NAME}()
-            val bundle: Bundle = Bundle()
-            bundle.putString(ARG_PARAM_, arg1)
-            fragment.arguments = bundle
-
-            return fragment
+        fun newInstance(arg1: String): ${NAME} = ${NAME}().apply() {
+            this.arguments = Bundle().apply {
+                this.putString(ARG_PARAM_, arg1)
+            }
         }
     }
+    //endregion
 
     @Inject
     lateinit var presenter: ${Contract_name}Contract.Presenter
 
-    // The fragment initialization parameters.
-    private var arg1: String? = null
+    // Get the arguments from the bundle here.
+    private val arg1: String by lazy { this.arguments.getString(ARG_PARAM_) }
 
     //region Fragment lifecycle
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // Get the arguments from the bundle here.
-        this.arg1 = arguments?.getString(${NAME}.ARG_PARAM_)
-    }
-
     override fun onResume() {
         super.onResume()
         this.presenter.resume()
@@ -82,8 +74,10 @@ class ${NAME}: BaseFragment(), ${Contract_name}Contract.View {
 
     /**
      * Initialization of this fragment. Set the listeners or view components' attributions.
+     *
+     * @param savedInstanceState the previous fragment data status after the system calls [onPause].
      */
-    override fun init() {
+    override fun init(savedInstanceState: Bundle?) {
     }
     //endregion
 }
